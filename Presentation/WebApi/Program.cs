@@ -2,6 +2,7 @@ using Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 using Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +19,12 @@ builder.Services.AddScoped<GetMovieByIdQueryHandler>();
 builder.Services.AddScoped<CreateMovieCommandHandler>();
 builder.Services.AddScoped<UpdateMovieCommandHandler>();
 builder.Services.AddScoped<RemoveMovieCommandHandler>();
-
+builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddControllers();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(x=>
+builder.Services.AddSwaggerGen(x=> 
 {
     x.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 });

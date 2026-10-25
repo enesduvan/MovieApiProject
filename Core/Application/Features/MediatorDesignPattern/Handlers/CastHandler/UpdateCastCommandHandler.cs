@@ -18,13 +18,16 @@ namespace Application.Features.MediatorDesignPattern.Handlers.CastHandler
         public async Task Handle(UpdateCastCommand request, CancellationToken cancellationToken)
         {
             var cast = await _context.Casts.FindAsync(request.CastId);
-            cast.Title = request.Title;
-            cast.Name = request.Name;
-            cast.Surname = request.Surname;
-            cast.ImageUrl = request.ImageUrl;
-            cast.Overview = request.Overview;
-            cast.Biography = request.Biography;
-            await _context.SaveChangesAsync();
+            if(cast != null)
+            {
+                cast.Title = request.Title;
+                cast.Name = request.Name;
+                cast.Surname = request.Surname;
+                cast.ImageUrl = request.ImageUrl;
+                cast.Overview = request.Overview;
+                cast.Biography = request.Biography;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
