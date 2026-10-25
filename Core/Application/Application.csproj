@@ -14,8 +14,4 @@
     <ProjectReference Include="..\..\Infrastructure\Persistence\Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\MediatorDesignPattern\Handlers\" />
-  </ItemGroup>
-
 </Project>
