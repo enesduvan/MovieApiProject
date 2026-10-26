@@ -3,7 +3,9 @@
     <Project Path="Core/Application/Application.csproj" />
     <Project Path="Core/Domain/Domain.csproj" />
   </Folder>
-  <Folder Name="/Frontends/" />
+  <Folder Name="/Frontends/">
+    <Project Path="frontends/WebUi/WebUi.csproj" Id="102c1c38-ef18-4245-b9bb-ae6c21b1e506" />
+  </Folder>
   <Folder Name="/Infrastructure/">
     <Project Path="Infrastructure/Persistence/Persistence.csproj" />
   </Folder>

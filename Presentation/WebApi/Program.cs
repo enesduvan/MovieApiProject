@@ -1,5 +1,7 @@
 using Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 using Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
+using Application.Features.MediatorDesignPattern.Handlers.CastHandler;
+using Application.Features.MediatorDesignPattern.Handlers.TagHandlers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using System.Reflection;
@@ -19,7 +21,9 @@ builder.Services.AddScoped<GetMovieByIdQueryHandler>();
 builder.Services.AddScoped<CreateMovieCommandHandler>();
 builder.Services.AddScoped<UpdateMovieCommandHandler>();
 builder.Services.AddScoped<RemoveMovieCommandHandler>();
-builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+//builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(typeof(GetTagQueryHandler).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetCastQueryHandler).Assembly));
 builder.Services.AddControllers();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

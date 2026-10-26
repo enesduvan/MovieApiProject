@@ -16,16 +16,16 @@ namespace Application.Features.MediatorDesignPattern.Handlers.TagHandlers
             _context = context;
         }
 
-        public Task<GetTagByIdQueryResult> Handle(GetTagByIdQuery request, CancellationToken cancellationToken)
+        public async Task<GetTagByIdQueryResult> Handle(GetTagByIdQuery request, CancellationToken cancellationToken)
         {
-            var tag = _context.Tags.Find(request.TagId);
+            var tag = await _context.Tags.FindAsync(request.TagId);
 
 
-            return Task.FromResult(new GetTagByIdQueryResult
+            return new GetTagByIdQueryResult
             {
                 TagId = tag.TagId,
                 Title = tag.Title
-            });
+            };
 
 
         }
