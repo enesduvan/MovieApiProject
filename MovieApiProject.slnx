@@ -4,6 +4,7 @@
     <Project Path="Core/Domain/Domain.csproj" />
   </Folder>
   <Folder Name="/Frontends/">
+    <Project Path="Frontends/MovieApiDto/MovieApiDto.csproj" Id="66e3dfff-f8fd-4f71-a583-03f049d1f235" />
     <Project Path="frontends/WebUi/WebUi.csproj" Id="102c1c38-ef18-4245-b9bb-ae6c21b1e506" />
   </Folder>
   <Folder Name="/Infrastructure/">
