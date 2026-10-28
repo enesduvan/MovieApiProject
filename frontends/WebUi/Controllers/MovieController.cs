@@ -32,7 +32,6 @@ namespace WebUi.Controllers
                 // Handle error response
                 return View();
             }
-            return View();
         }
 
         public async Task<IActionResult> MovieDetail(int id)
