@@ -1,13 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client.NativeInterop;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MovieApi.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
+using Persistence.Identity;
+//add-migration mig3
+//update-database
 namespace Persistence
 {
-    public class MovieContext : DbContext
+    public class MovieContext : IdentityDbContext<AppUser>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
