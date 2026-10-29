@@ -1,0 +1,262 @@
+﻿@model MovieApiDto.Dtos.UserRegisterDtos.CreateUserRegisterDto
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Kayıt Ol | Film İnceleme Platformu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html, body, div, form, input, label, h2, p, button {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #06121e url('/Film-Review-Movie-Database/images/uploads/slider-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 15px;
+            color: #abb7c4;
+            position: relative;
+        }
+
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(3, 16, 27, 0.88);
+                z-index: 1;
+            }
+
+        .register-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 540px;
+            background: #0b1a2a;
+            border: 1px solid #1a324b;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .register-header img {
+                margin-bottom: 20px;
+            }
+
+            .register-header h2 {
+                font-family: 'Dosis', sans-serif;
+                font-size: 26px;
+                color: #ffffff;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+
+            .register-header p {
+                font-size: 14px;
+                color: #abb7c4;
+                margin-top: 5px;
+            }
+
+        .form-row-group {
+            display: flex;
+            gap: 15px;
+        }
+
+            .form-row-group .form-group {
+                flex: 1;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+            .form-group label {
+                display: block;
+                font-family: 'Dosis', sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+            .input-wrapper i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #4f6880;
+                font-size: 15px;
+                transition: color 0.3s ease;
+            }
+
+            .input-wrapper input {
+                width: 100%;
+                height: 46px;
+                background: #020d18;
+                border: 1px solid #233a50;
+                border-radius: 4px;
+                padding: 0 15px 0 42px;
+                color: #ffffff;
+                font-size: 14px;
+                font-family: 'Nunito', sans-serif;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+                .input-wrapper input:focus {
+                    border-color: #dd003f;
+                }
+
+                    .input-wrapper input:focus + i {
+                        color: #dd003f;
+                    }
+
+                .input-wrapper input::placeholder {
+                    color: #4f6880;
+                    font-size: 13px;
+                }
+
+        .btn-submit {
+            width: 100%;
+            height: 48px;
+            background-color: #dd003f;
+            color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Dosis', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+            .btn-submit:hover {
+                background-color: #b80034;
+            }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #1a324b;
+            font-size: 14px;
+        }
+
+            .form-footer a {
+                color: #dcf836;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 5px;
+                transition: color 0.3s;
+            }
+
+                .form-footer a:hover {
+                    color: #ffffff;
+                    text-decoration: underline;
+                }
+
+        @@media (max-width: 576px) {
+            .form-row-group {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .register-container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <a href="/UserWebUILayout/UserWebUILayout">
+                <img src="/Film-Review-Movie-Database/images/logo1.png" alt="Logo" width="119" height="58">
+            </a>
+            <h2>Hesap Oluştur</h2>
+            <p>Favori filmlerinizi listelemek ve incelemek için katılın</p>
+        </div>
+
+        <form method="post">
+            <div class="form-row-group">
+                <div class="form-group">
+                    <label for="name">Ad</label>
+                    <div class="input-wrapper">
+                        <input type="text" asp-for="Name" id="name" placeholder="Adınız" required>
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nameSurname">Soyad</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="nameSurname" asp-for="Surname" placeholder="Soyadınız" required>
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı</label>
+                <div class="input-wrapper">
+                    <input type="text" id="username" name="Username" asp-for="Username" placeholder="Kullanıcı adınızı belirleyin" required>
+                    <i class="fa fa-id-badge"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Posta</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" asp-for="Email" placeholder="ornek@email.com" required>
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Şifre</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" asp-for="Password" placeholder="******" required>
+                    <i class="fa fa-lock"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Kayıt Ol</button>
+
+            <div class="form-footer">
+                <span>Zaten bir hesabınız var mı?</span>
+                <a href="/Login/Index">Giriş Yap</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
