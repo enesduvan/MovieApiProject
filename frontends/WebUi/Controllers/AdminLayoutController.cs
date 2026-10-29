@@ -8,10 +8,5 @@ namespace WebUi.Controllers
         {
             return View();
         }
-
-        public IActionResult AdminLayoutUI()
-        {
-            return View("Index");
-        }
     }
 }

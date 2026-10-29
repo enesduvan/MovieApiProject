@@ -1,0 +1,222 @@
+﻿<style>
+    /* Tema Özelleştirici (Switcher) Modern Tasarım */
+    .switcher-body .btn-switcher {
+        background: linear-gradient(135deg, #7928ca, #9b51e0) !important;
+        border: none !important;
+        border-radius: 12px 0 0 12px !important;
+        box-shadow: -4px 4px 15px rgba(121, 40, 202, 0.4) !important;
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+        .switcher-body .btn-switcher:hover {
+            width: 52px;
+            background: linear-gradient(135deg, #681db5, #893dec) !important;
+        }
+
+    .switcher-body .offcanvas {
+        background-color: #1e1e2d !important;
+        color: #e2e8f0 !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .switcher-body .offcanvas-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        padding: 18px 20px;
+    }
+
+    .switcher-body .offcanvas-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .switcher-body .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+        opacity: 0.7;
+    }
+
+    .switcher-section-title {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #9ca3af;
+        margin-bottom: 14px;
+    }
+
+    /* Modern Tema Seçim Kartları */
+    .theme-options-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .theme-card-option {
+        position: relative;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+        .theme-card-option .form-check-input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 2;
+            margin: 0;
+        }
+
+    .theme-card-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 12px 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        color: #d1d5db;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+        .theme-card-label ion-icon {
+            font-size: 20px;
+            color: #9ca3af;
+            transition: all 0.2s ease;
+        }
+
+    .theme-card-option .form-check-input:checked + .theme-card-label {
+        background: rgba(155, 81, 224, 0.15);
+        border-color: #9b51e0;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(155, 81, 224, 0.2);
+    }
+
+        .theme-card-option .form-check-input:checked + .theme-card-label ion-icon {
+            color: #a855f7;
+        }
+
+    /* Başlık Renk Seçicileri (Indigators) */
+    .header-colors-indigators .indigator {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px !important;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+        .header-colors-indigators .indigator:hover {
+            transform: scale(1.12);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            border-color: #ffffff;
+        }
+
+    /* Yukarı Çık (Back to Top) Butonu */
+    .back-to-top {
+        background: linear-gradient(135deg, #7928ca, #9b51e0) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 4px 15px rgba(121, 40, 202, 0.4) !important;
+    }
+</style>
+
+<!--Start Back To Top Button-->
+<a href="javaScript:;" class="back-to-top" title="Yukarı Çık">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+</a>
+<!--End Back To Top Button-->
+<!--start switcher-->
+<div class="switcher-body">
+    <button class="btn btn-primary btn-switcher shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" title="Tema Ayarları">
+        <ion-icon name="color-palette-sharp" class="me-0" style="font-size: 20px;"></ion-icon>
+    </button>
+    <div class="offcanvas offcanvas-end shadow border-start-0 p-2" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                <ion-icon name="sparkles-outline" style="color: #a855f7;"></ion-icon>
+                <span>Tema Özelleştirici</span>
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="switcher-section-title">Tema Görünümü</div>
+            
+            <div class="theme-options-grid">
+                <div class="form-check form-check-inline theme-card-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="LightTheme" value="option1" checked>
+                    <label class="form-check-label theme-card-label" for="LightTheme">
+                        <ion-icon name="sunny-outline"></ion-icon>
+                        <span>Açık</span>
+                    </label>
+                </div>
+                <div class="form-check form-check-inline theme-card-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="DarkTheme" value="option2">
+                    <label class="form-check-label theme-card-label" for="DarkTheme">
+                        <ion-icon name="moon-outline"></ion-icon>
+                        <span>Koyu</span>
+                    </label>
+                </div>
+                <div class="form-check form-check-inline theme-card-option">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="SemiDark" value="option3">
+                    <label class="form-check-label theme-card-label" for="SemiDark">
+                        <ion-icon name="contrast-outline"></ion-icon>
+                        <span>Yarı Koyu</span>
+                    </label>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.08); margin: 20px 0;" />
+            
+            <div class="switcher-section-title">Üst Menü (Header) Renkleri</div>
+            
+            <div class="header-colors-indigators">
+                <div class="row row-cols-4 g-3">
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor1" id="headercolor1" title="Renk 1"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor2" id="headercolor2" title="Renk 2"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor3" id="headercolor3" title="Renk 3"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor4" id="headercolor4" title="Renk 4"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor5" id="headercolor5" title="Renk 5"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor6" id="headercolor6" title="Renk 6"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor7" id="headercolor7" title="Renk 7"></div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="indigator headercolor8" id="headercolor8" title="Renk 8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end switcher-->
+<!--start overlay-->
+<div class="overlay nav-toggle-icon"></div>
