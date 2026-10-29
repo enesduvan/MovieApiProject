@@ -1,0 +1,110 @@
+﻿<style>
+    /* Modern Breadcrumb & Dropdown Tasarımı */
+    .modern-action-btn {
+        background: linear-gradient(135deg, #7928ca, #9b51e0);
+        color: #ffffff !important;
+        border: none;
+        border-radius: 10px;
+        padding: 9px 18px;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 15px rgba(121, 40, 202, 0.3);
+        transition: all 0.25s ease;
+    }
+
+        .modern-action-btn:hover, .modern-action-btn:focus {
+            background: linear-gradient(135deg, #681db5, #893dec);
+            box-shadow: 0 6px 20px rgba(121, 40, 202, 0.45);
+            transform: translateY(-1px);
+        }
+
+    .modern-dropdown-menu {
+        background-color: #1e1e2d !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 12px !important;
+        padding: 8px !important;
+        min-width: 215px !important;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5) !important;
+        margin-top: 8px !important;
+    }
+
+        .modern-dropdown-menu .dropdown-item {
+            color: #d1d5db !important;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 13.5px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+
+            .modern-dropdown-menu .dropdown-item ion-icon {
+                font-size: 18px;
+                padding: 6px;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.05);
+                transition: all 0.2s ease;
+            }
+
+            .modern-dropdown-menu .dropdown-item:hover {
+                background-color: rgba(155, 81, 224, 0.15) !important;
+                color: #ffffff !important;
+                transform: translateX(3px);
+            }
+
+        .modern-dropdown-menu .dropdown-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 6px 0;
+        }
+</style>
+
+<!--start breadcrumb-->
+<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-4">
+    <div class="breadcrumb-title pe-3 fw-semibold">Tablolar</div>
+    <div class="ps-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 p-0 align-items-center">
+                <li class="breadcrumb-item">
+                    <a href="javascript:;" class="d-flex align-items-center">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Gelişmiş Tablolar</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="ms-auto">
+        <div class="dropdown">
+            <button type="button" class="modern-action-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <ion-icon name="options-outline" style="font-size: 18px;"></ion-icon>
+                <span>Hızlı İşlemler</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end modern-dropdown-menu">
+                <a class="dropdown-item" href="javascript:;">
+                    <ion-icon name="add-circle-outline" style="color: #a855f7;"></ion-icon>
+                    <span>Yeni Film Ekle</span>
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                    <ion-icon name="download-outline" style="color: #3b82f6;"></ion-icon>
+                    <span>Listeyi Dışa Aktar</span>
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                    <ion-icon name="refresh-outline" style="color: #eab308;"></ion-icon>
+                    <span>Filtreleri Temizle</span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:;">
+                    <ion-icon name="settings-outline" style="color: #ec4899;"></ion-icon>
+                    <span>Tablo Ayarları</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end breadcrumb-->

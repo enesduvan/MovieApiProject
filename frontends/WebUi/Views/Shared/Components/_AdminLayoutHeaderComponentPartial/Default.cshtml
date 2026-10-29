@@ -1,0 +1,324 @@
+﻿<header class="top-header">
+    <nav class="navbar navbar-expand gap-3">
+        <div class="toggle-icon">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+
+        <form class="searchbar">
+            <div class="position-absolute top-50 translate-middle-y search-icon ms-3">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <input class="form-control" type="text" placeholder="Herhangi bir şey arayın...">
+            <div class="position-absolute top-50 translate-middle-y search-close-icon">
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </form>
+        <div class="top-navbar-right ms-auto">
+
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link mobile-search-button" href="javascript:;">
+                        <div class="">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dark-mode-icon" href="javascript:;">
+                        <div class="mode-icon">
+                            <ion-icon name="moon-outline"></ion-icon>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item dropdown dropdown-large dropdown-apps">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
+                        <div class="">
+                            <ion-icon name="apps-outline"></ion-icon>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                        <div class="row row-cols-3 g-3 p-3">
+                            <div class="col text-center">
+                                <div class="app-box mx-auto bg-gradient-purple text-white">
+                                    <ion-icon name="film-outline"></ion-icon>
+                                </div>
+                                <div class="app-title">Filmler</div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="app-box mx-auto bg-gradient-info text-white">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </div>
+                                <div class="app-title">Oyuncular</div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="app-box mx-auto bg-gradient-success text-white">
+                                    <ion-icon name="shield-checkmark-outline"></ion-icon>
+                                </div>
+                                <div class="app-title">Görevler</div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="app-box mx-auto bg-gradient-danger text-white">
+                                    <ion-icon name="videocam-outline"></ion-icon>
+                                </div>
+                                <div class="app-title">Medya</div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="app-box mx-auto bg-gradient-warning text-white">
+                                    <ion-icon name="file-tray-outline"></ion-icon>
+                                </div>
+                                <div class="app-title">Dosyalar</div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="app-box mx-auto bg-gradient-branding text-white">
+                                    <ion-icon name="notifications-outline"></ion-icon>
+                                </div>
+                                <div class="app-title">Uyarılar</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown dropdown-large">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
+                        <div class="position-relative">
+                            <span class="notify-badge">8</span>
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a href="javascript:;">
+                            <div class="msg-header">
+                                <p class="msg-header-title">Bildirimler</p>
+                                <p class="msg-header-clear ms-auto">Tümünü okundu işaretle</p>
+                            </div>
+                        </a>
+                        <div class="header-notifications-list">
+                            <a class="dropdown-item" href="javascript:;">
+                                <div class="d-flex align-items-center">
+                                    <div class="notify text-primary">
+                                        <ion-icon name="film-outline"></ion-icon>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="msg-name">
+                                            Yeni Film Eklendi <span class="msg-time float-end">
+                                            2 dk önce
+                                        </span>
+                                    </h6>
+                                    <p class="msg-info">Sisteme yeni filmler kaydedildi</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="javascript:;">
+                            <div class="d-flex align-items-center">
+                                <div class="notify text-danger">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="msg-name">
+                                        Yeni Üyeler<span class="msg-time float-end">
+                                        14 sn önce
+                                    </span>
+                                </h6>
+                                <p class="msg-info">5 yeni kullanıcı kayıt oldu</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item" href="javascript:;">
+                        <div class="d-flex align-items-center">
+                            <div class="notify text-success">
+                                <ion-icon name="document-outline"></ion-icon>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="msg-name">
+                                    24 PDF Dosyası<span class="msg-time float-end">
+                                    19 dk önce
+                                </span>
+                            </h6>
+                            <p class="msg-info">PDF raporları oluşturuldu</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex align-items-center">
+                        <div class="notify text-info">
+                            <ion-icon name="checkmark-done-outline"></ion-icon>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="msg-name">Yeni İçerik Onaylandı <span class="msg-time float-end">2 saat önce</span></h6>
+                            <p class="msg-info">Yeni film incelemesi onaylandı</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="dropdown-item" href="javascript:;">
+                    <div class="d-flex align-items-center">
+                        <div class="notify text-warning">
+                            <ion-icon name="send-outline"></ion-icon>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="msg-name">
+                                Yanıt Süresi <span class="msg-time float-end">
+                                28 dk önce
+                            </span>
+                        </h6>
+                        <p class="msg-info">Ortalama 5.1 dk yanıt süresi</p>
+                    </div>
+                </div>
+            </a>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="notify text-danger">
+                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h6 class="msg-name">
+                            Yeni Yorumlar <span class="msg-time float-end">
+                            4 saat önce
+                        </span>
+                    </h6>
+                    <p class="msg-info">Yeni kullanıcı yorumları alındı</p>
+                </div>
+            </div>
+        </a>
+        <a class="dropdown-item" href="javascript:;">
+            <div class="d-flex align-items-center">
+                <div class="notify text-primary">
+                    <ion-icon name="albums-outline"></ion-icon>
+                </div>
+                <div class="flex-grow-1">
+                    <h6 class="msg-name">
+                        24 Yeni Yazar<span class="msg-time float-end">
+                        1 gün önce
+                    </span>
+                </h6>
+                <p class="msg-info">Geçen hafta 24 yeni eleştirmen katıldı</p>
+            </div>
+        </div>
+    </a>
+    <a class="dropdown-item" href="javascript:;">
+        <div class="d-flex align-items-center">
+            <div class="notify text-success">
+                <ion-icon name="shield-outline"></ion-icon>
+            </div>
+            <div class="flex-grow-1">
+                <h6 class="msg-name">
+                    Yedekleme Tamamlandı <span class="msg-time float-end">
+                    5 saat önce
+                </span>
+            </h6>
+            <p class="msg-info">Veritabanı başarıyla yedeklendi</p>
+        </div>
+    </div>
+</a>
+<a class="dropdown-item" href="javascript:;">
+    <div class="d-flex align-items-center">
+        <div class="notify text-warning">
+            <ion-icon name="cafe-outline"></ion-icon>
+        </div>
+        <div class="flex-grow-1">
+            <h6 class="msg-name">
+                Güvenlik Uyarıları <span class="msg-time float-end">
+                2 hafta önce
+            </span>
+        </h6>
+        <p class="msg-info">Son 4 haftada %45 daha az uyarı</p>
+    </div>
+</div>
+</a>
+</div>
+<a href="javascript:;">
+    <div class="text-center msg-footer">Tüm Bildirimleri Gör</div>
+</a>
+</div>
+</li>
+<li class="nav-item dropdown dropdown-user-setting">
+    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;" data-bs-toggle="dropdown">
+        <div class="user-setting">
+            <img src="/ltr/assets/images/avatars/06.png" class="user-img" alt="">
+        </div>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex flex-row align-items-center gap-2">
+                    <img src="/ltr/assets/images/avatars/06.png" alt="" class="rounded-circle" width="54" height="54">
+                    <div class="">
+                        <h6 class="mb-0 dropdown-user-name">Enes Duvan</h6>
+                        <small class="mb-0 dropdown-user-designation text-secondary">Geliştirici</small>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                    <div class="ms-3"><span>Profilim</span></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </div>
+                    <div class="ms-3"><span>Ayarlar</span></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <ion-icon name="speedometer-outline"></ion-icon>
+                    </div>
+                    <div class="ms-3"><span>Kontrol Paneli</span></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                    <div class="ms-3"><span>İstatistikler</span></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <ion-icon name="cloud-download-outline"></ion-icon>
+                    </div>
+                    <div class="ms-3"><span>İndirilenler</span></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
+        <li>
+            <a class="dropdown-item" href="javascript:;">
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </div>
+                    <div class="ms-3"><span>Çıkış Yap</span></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</li>
+
+</ul>
+
+</div>
+</nav>
+</header>
