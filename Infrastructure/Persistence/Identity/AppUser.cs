@@ -8,7 +8,7 @@ namespace Persistence.Identity
     public class AppUser : Microsoft.AspNetCore.Identity.IdentityUser
     {
         public string Name { get; set; }
-        public string NameSurname { get; set; }
+        public string Surname { get; set; }
         public string? ProfileImageUrl { get; set; }
     }
 }
