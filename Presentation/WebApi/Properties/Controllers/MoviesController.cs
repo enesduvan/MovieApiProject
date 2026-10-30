@@ -48,7 +48,7 @@ namespace WebApi.Properties.Controllers
             await _createMovieCommandHandler.Handle(command);
             return Ok("Movie created successfully.");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMovie(int id)
         {
             await _removeMovieCommandHandler.Handle(new RemoveMovieCommand(id));

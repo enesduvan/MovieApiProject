@@ -17,5 +17,7 @@ namespace MovieApi.Domain.Entities
         public DateTime ReleaseDate { get; set; }
         public string CreatedYear { get; set; }
         public string Status { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }

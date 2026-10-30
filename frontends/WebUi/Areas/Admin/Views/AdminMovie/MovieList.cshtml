@@ -4,206 +4,23 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<!-- Bootstrap Icons & Boxicons Fallback Support -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-<style>
-    /* Modern Kart Tasarımı */
-    .modern-card {
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        margin-bottom: 30px;
-        background: #1e2129;
-    }
-
-    .modern-card .card-body {
-        padding: 26px;
-    }
-
-    .table-header-title {
-        font-size: 19px;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: #ffffff;
-    }
-
-    .table-header-title i, .table-header-title ion-icon {
-        font-size: 24px;
-        color: #9b51e0;
-        background: rgba(155, 81, 224, 0.15);
-        padding: 10px;
-        border-radius: 12px;
-    }
-
-    /* Tablo Tasarımı */
-    .modern-table thead th {
-        font-size: 12.5px;
-        text-transform: uppercase;
-        letter-spacing: 0.6px;
-        font-weight: 600;
-        padding: 15px 14px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        color: #cbd5e1;
-        white-space: nowrap;
-    }
-
-    .modern-table tbody td {
-        padding: 14px 14px;
-        vertical-align: middle;
-        font-size: 14px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .modern-table tbody tr {
-        transition: background-color 0.2s ease;
-    }
-
-    .modern-table tbody tr:hover {
-        background-color: rgba(155, 81, 224, 0.06);
-    }
-
-    /* Film Afiş Görseli */
-    .movie-poster-thumb {
-        width: 48px;
-        height: 68px;
-        object-fit: cover;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        flex-shrink: 0;
-        background-color: #2b2f3a;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Puan Rozeti */
-    .rating-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        background: rgba(234, 179, 8, 0.15);
-        color: #facc15;
-        font-weight: 700;
-        padding: 5px 10px;
-        border-radius: 8px;
-        font-size: 13px;
-        border: 1px solid rgba(234, 179, 8, 0.3);
-        white-space: nowrap;
-    }
-
-    /* Profesyonel Buton Tasarımları */
-    .btn-action-delete {
-        background: rgba(239, 68, 68, 0.12);
-        color: #ff6b6b !important;
-        border: 1px solid rgba(239, 68, 68, 0.4);
-        font-weight: 500;
-        font-size: 13px;
-        padding: 6px 14px;
-        border-radius: 8px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        text-decoration: none;
-        transition: all 0.25s ease;
-        white-space: nowrap;
-    }
-
-    .btn-action-delete:hover {
-        background: #ef4444 !important;
-        color: #ffffff !important;
-        border-color: #ef4444;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
-    }
-
-    .btn-action-edit {
-        background: rgba(245, 158, 11, 0.12);
-        color: #fbbf24 !important;
-        border: 1px solid rgba(245, 158, 11, 0.4);
-        font-weight: 500;
-        font-size: 13px;
-        padding: 6px 14px;
-        border-radius: 8px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        text-decoration: none;
-        transition: all 0.25s ease;
-        white-space: nowrap;
-    }
-
-    .btn-action-edit:hover {
-        background: #f59e0b !important;
-        color: #ffffff !important;
-        border-color: #f59e0b;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
-    }
-
-    .btn-action-view {
-        background: rgba(59, 130, 246, 0.12);
-        color: #60a5fa !important;
-        border: 1px solid rgba(59, 130, 246, 0.4);
-        font-weight: 500;
-        font-size: 13px;
-        padding: 6px 14px;
-        border-radius: 8px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        text-decoration: none;
-        transition: all 0.25s ease;
-        white-space: nowrap;
-    }
-
-    .btn-action-view:hover {
-        background: #3b82f6 !important;
-        color: #ffffff !important;
-        border-color: #3b82f6;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
-    }
-
-    .btn-add-movie {
-        background: linear-gradient(135deg, #9b51e0 0%, #7033ff 100%);
-        color: #ffffff !important;
-        border: none;
-        border-radius: 10px;
-        padding: 9px 20px;
-        font-weight: 500;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.25s ease;
-        text-decoration: none;
-        box-shadow: 0 4px 14px rgba(155, 81, 224, 0.3);
-    }
-
-    .btn-add-movie:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(155, 81, 224, 0.5);
-    }
-</style>
-
-<div class="card modern-card">
+<div class="card">
     <div class="card-body">
         <!-- Kart Üst Başlık ve Butonlar -->
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3 pb-3 border-bottom">
             <div>
-                <h5 class="mb-1 table-header-title">
-                    <i class="bx bx-film"></i>
+                <h5 class="mb-1 d-flex align-items-center gap-2">
+                    <i class="bx bx-film text-primary fs-4"></i>
                     <span>Film Listesi ve Yönetim Paneli</span>
                 </h5>
-                <p class="text-secondary mb-0 small ps-5">
+                <p class="text-muted mb-0 small ps-4">
                     Sistemde toplam <strong>@(Model?.Count ?? 0)</strong> film listelenmektedir.
                 </p>
             </div>
 
             <div>
-                <!-- Yeni Film Ekle Butonu -->
-                <a href="javascript:;" class="btn btn-add-movie">
-                    <i class="bx bx-plus-circle font-20"></i>
+                <a href="/Admin/AdminMovie/CreateMovie" class="btn btn-primary d-inline-flex align-items-center gap-1">
+                    <i class="bx bx-plus-circle fs-5"></i>
                     <span>Yeni Film Ekle</span>
                 </a>
             </div>
@@ -211,19 +28,19 @@
 
         <!-- Film Tablosu -->
         <div class="table-responsive">
-            <table class="table align-middle modern-table mb-0">
-                <thead class="table-secondary">
+            <table class="table align-middle mb-0">
+                <thead>
                     <tr>
                         <th style="width: 50px;">#</th>
-                        <th>Film Bilgisi</th>
-                        <th>Puan</th>
-                        <th>Süre</th>
-                        <th>Çıkış Yılı</th>
-                        <th>Vizyon Tarihi</th>
-                        <th>Durum</th>
-                        <th class="text-center" style="width: 90px;">Sil</th>
-                        <th class="text-center" style="width: 100px;">Güncelle</th>
-                        <th class="text-center" style="width: 100px;">Detaylar</th>
+                        <th>FİLM BİLGİSİ</th>
+                        <th>PUAN</th>
+                        <th>SÜRE</th>
+                        <th>ÇIKIŞ YILI</th>
+                        <th>VİZYON TARİHİ</th>
+                        <th>DURUM</th>
+                        <th class="text-center" style="width: 90px;">SİL</th>
+                        <th class="text-center" style="width: 100px;">GÜNCELLE</th>
+                        <th class="text-center" style="width: 100px;">DETAYLAR</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -232,53 +49,41 @@
                         foreach (var item in Model)
                         {
                             <tr>
-                                <!-- ID -->
                                 <td class="fw-bold text-secondary">@item.MovieId</td>
-
-                                <!-- Film Bilgisi -->
                                 <td>
                                     <div class="d-flex align-items-center gap-3">
                                         <img src="@item.CoverImageUrl" 
-                                             class="movie-poster-thumb" 
+                                             class="rounded" 
+                                             style="width: 46px; height: 64px; object-fit: cover;" 
                                              alt="@item.Title">
                                         <div>
-                                            <p class="mb-0 fw-semibold text-white">@item.Title</p>
-                                            <small class="text-secondary d-block text-truncate" style="max-width: 260px;" title="@item.Description">
+                                            <h6 class="mb-0">@item.Title</h6>
+                                            <small class="text-muted d-block text-truncate" style="max-width: 250px;" title="@item.Description">
                                                 @(string.IsNullOrEmpty(item.Description) ? "Açıklama belirtilmemiş" : item.Description)
                                             </small>
                                         </div>
                                     </div>
                                 </td>
-
-                                <!-- Puan -->
                                 <td>
-                                    <span class="rating-pill">
-                                        <i class="bx bxs-star"></i> @item.Rating
+                                    <span class="badge bg-light-warning text-warning px-3 py-2">
+                                        <i class="bx bxs-star me-1"></i> @item.Rating
                                     </span>
                                 </td>
-
-                                <!-- Süre -->
                                 <td>
-                                    <span class="text-secondary">
+                                    <span class="text-muted">
                                         <i class="bx bx-time-five me-1"></i>@(item.Duration > 0 ? item.Duration + " Dk" : "-")
                                     </span>
                                 </td>
-
-                                <!-- Çıkış Yılı -->
                                 <td>
                                     <span class="badge bg-light-primary text-primary px-3 py-2">
                                         @(string.IsNullOrEmpty(item.CreatedYear) ? "-" : item.CreatedYear)
                                     </span>
                                 </td>
-
-                                <!-- Vizyon Tarihi -->
                                 <td>
-                                    <span class="text-secondary">
+                                    <span class="text-muted">
                                         <i class="bx bx-calendar me-1"></i>@(item.ReleaseDate != default ? item.ReleaseDate.ToString("dd.MM.yyyy") : "-")
                                     </span>
                                 </td>
-
-                                <!-- Durum -->
                                 <td>
                                     @if (item.Status == "True" || item.Status == "Vizyonda" || item.Status == "Aktif")
                                     {
@@ -289,27 +94,24 @@
                                         <span class="badge bg-light-secondary text-secondary px-3 py-2">@(string.IsNullOrEmpty(item.Status) ? "Pasif" : item.Status)</span>
                                     }
                                 </td>
-
-                                <!-- Sil Butonu (Profesyonel Buton) -->
                                 <td class="text-center">
-                                    <a href="javascript:;" class="btn-action-delete" title="Filmi Sil">
-                                        <i class="bx bx-trash font-18"></i>
+                                    <a href="/Admin/AdminMovie/DeleteMovie/@item.MovieId" 
+                                       onclick="return confirm('@item.Title filmini silmek istediğinize emin misiniz?');" 
+                                       class="btn btn-sm btn-outline-danger d-inline-flex align-items-center gap-1" 
+                                       title="Filmi Sil">
+                                        <i class="bx bx-trash"></i>
                                         <span>Sil</span>
                                     </a>
                                 </td>
-
-                                <!-- Güncelle Butonu (Profesyonel Buton) -->
                                 <td class="text-center">
-                                    <a href="javascript:;" class="btn-action-edit" title="Filmi Güncelle">
-                                        <i class="bx bx-edit font-18"></i>
+                                    <a href="javascript:;" class="btn btn-sm btn-outline-warning d-inline-flex align-items-center gap-1" title="Filmi Güncelle">
+                                        <i class="bx bx-edit"></i>
                                         <span>Güncelle</span>
                                     </a>
                                 </td>
-
-                                <!-- Detaylar Butonu (Profesyonel Buton) -->
                                 <td class="text-center">
-                                    <a href="javascript:;" class="btn-action-view" title="Film Detayları">
-                                        <i class="bx bx-show font-18"></i>
+                                    <a href="javascript:;" class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1" title="Film Detayları">
+                                        <i class="bx bx-show"></i>
                                         <span>Detaylar</span>
                                     </a>
                                 </td>
@@ -320,11 +122,11 @@
                     {
                         <tr>
                             <td colspan="10" class="text-center py-5">
-                                <div class="text-secondary">
-                                    <i class="bx bx-film" style="font-size: 54px; opacity: 0.35;"></i>
-                                    <h6 class="mt-3 mb-1 text-white">Henüz Kayıtlı Film Bulunamadı</h6>
-                                    <p class="small text-muted mb-3">Veritabanında kayıtlı film yok veya API bağlantısı sağlanamadı.</p>
-                                    <a href="javascript:;" class="btn btn-sm btn-outline-primary">
+                                <div class="text-muted">
+                                    <i class="bx bx-film fs-1 opacity-50"></i>
+                                    <h6 class="mt-3 mb-1">Henüz Kayıtlı Film Bulunamadı</h6>
+                                    <p class="small mb-3">Veritabanında kayıtlı film yok veya API bağlantısı sağlanamadı.</p>
+                                    <a href="/Admin/AdminMovie/CreateMovie" class="btn btn-sm btn-outline-primary">
                                         <i class="bx bx-plus me-1"></i> Yeni Film Ekle
                                     </a>
                                 </div>
@@ -336,11 +138,11 @@
         </div>
 
         <!-- Kart Alt Bilgi -->
-        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top border-secondary border-opacity-10">
-            <span class="text-secondary small">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4 pt-3 border-top">
+            <span class="text-muted small">
                 © @DateTime.Now.Year Film Yönetim Sistemi • MovieApiProject Admin Paneli
             </span>
-            <a href="javascript:;" class="btn btn-sm btn-outline-primary">
+            <a href="/Admin/AdminMovie/CreateMovie" class="btn btn-sm btn-outline-primary">
                 <i class="bx bx-plus me-1"></i> Yeni Film Ekle
             </a>
         </div>

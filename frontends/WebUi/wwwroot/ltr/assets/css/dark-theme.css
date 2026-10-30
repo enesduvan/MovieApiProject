@@ -1,7 +1,7 @@
 
 html.dark-theme body{
-    --bs-body-color: #969696;
-    color: #969696;
+    --bs-body-color: #cbd5e1;
+    color: #cbd5e1;
     background-color: #181818;
 
 }
@@ -12,7 +12,12 @@ html.dark-theme ::placeholder {
 }
 
 html.dark-theme p {
-    color: #cecece;
+    color: #cbd5e1;
+}
+
+html.dark-theme strong,
+html.dark-theme b {
+    color: #f8fafc;
 }
 
 html.dark-theme .h1,
@@ -27,7 +32,7 @@ html.dark-theme h3,
 html.dark-theme h4, 
 html.dark-theme h5, 
 html.dark-theme h6 {
-    color: #cecece;
+    color: #f8fafc;
 }
 
 
@@ -700,6 +705,162 @@ html.dark-theme .top-header .navbar .full-search-bar {
     background-color: rgb(26 34 50 / 0%);
     border-bottom: 1px solid rgb(255 255 255 / 0%);
 }
+
+/* ==============================================================
+   DARK THEME TEXT VISIBILITY & CONTRAST FIXES
+   ============================================================== */
+
+/* Muted & Secondary text (formerly dark grey / invisible) */
+html.dark-theme .text-muted,
+html.dark-theme small.text-muted,
+html.dark-theme p.text-muted,
+html.dark-theme span.text-muted,
+html.dark-theme td.text-muted,
+html.dark-theme div.text-muted {
+    color: #94a3b8 !important;
+}
+
+html.dark-theme .text-secondary,
+html.dark-theme td.text-secondary {
+    color: #cbd5e1 !important;
+}
+
+html.dark-theme .text-dark {
+    color: #f8fafc !important;
+}
+
+/* Primary text & Blue accents in dark theme - vibrant sky blue (#60a5fa) */
+html.dark-theme .text-primary,
+html.dark-theme i.text-primary,
+html.dark-theme ion-icon.text-primary,
+html.dark-theme span.text-primary,
+html.dark-theme div.text-primary {
+    color: #60a5fa !important;
+}
+
+html.dark-theme a {
+    color: #60a5fa;
+}
+
+html.dark-theme a:hover {
+    color: #93c5fd;
+}
+
+/* Badges in dark theme */
+html.dark-theme .bg-light-primary {
+    background-color: rgba(96, 165, 250, 0.16) !important;
+    color: #60a5fa !important;
+}
+
+html.dark-theme .bg-light-secondary {
+    background-color: rgba(203, 213, 225, 0.15) !important;
+    color: #cbd5e1 !important;
+}
+
+html.dark-theme .bg-light-info {
+    background-color: rgba(56, 189, 248, 0.16) !important;
+    color: #38bdf8 !important;
+}
+
+html.dark-theme .bg-light-warning {
+    background-color: rgba(251, 191, 36, 0.16) !important;
+    color: #fbbf24 !important;
+}
+
+html.dark-theme .bg-light-success {
+    background-color: rgba(52, 211, 153, 0.16) !important;
+    color: #34d399 !important;
+}
+
+html.dark-theme .bg-light-danger {
+    background-color: rgba(248, 113, 113, 0.16) !important;
+    color: #f87171 !important;
+}
+
+/* Buttons in dark theme */
+html.dark-theme .btn-outline-primary {
+    --bs-btn-color: #60a5fa;
+    --bs-btn-border-color: #60a5fa;
+    --bs-btn-hover-bg: #2563eb;
+    --bs-btn-hover-border-color: #2563eb;
+    --bs-btn-hover-color: #ffffff;
+    color: #60a5fa !important;
+    border-color: #60a5fa !important;
+}
+
+html.dark-theme .btn-outline-primary:hover {
+    color: #ffffff !important;
+    background-color: #2563eb !important;
+}
+
+html.dark-theme .btn-outline-secondary {
+    --bs-btn-color: #cbd5e1;
+    --bs-btn-border-color: #475569;
+    --bs-btn-hover-bg: #334155;
+    --bs-btn-hover-border-color: #475569;
+    --bs-btn-hover-color: #ffffff;
+    color: #cbd5e1 !important;
+    border-color: #475569 !important;
+}
+
+/* Table styling in dark theme - NEVER white strip, NEVER black text */
+html.dark-theme .table {
+    --bs-table-bg: transparent !important;
+    --bs-table-accent-bg: transparent !important;
+    --bs-table-striped-color: #ffffff !important;
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.02) !important;
+    --bs-table-active-color: #ffffff !important;
+    --bs-table-active-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-hover-color: #ffffff !important;
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.04) !important;
+    --bs-table-color: #e2e8f0 !important;
+    color: #e2e8f0 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark-theme .table thead,
+html.dark-theme .table thead tr,
+html.dark-theme .table-secondary,
+html.dark-theme .table-light {
+    --bs-table-bg: transparent !important;
+    --bs-table-color: #f8fafc !important;
+    --bs-table-striped-color: #ffffff !important;
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.02) !important;
+    --bs-table-active-color: #ffffff !important;
+    --bs-table-active-bg: rgba(255, 255, 255, 0.05) !important;
+    --bs-table-hover-color: #ffffff !important;
+    --bs-table-hover-bg: rgba(255, 255, 255, 0.04) !important;
+    --bs-table-border-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: transparent !important;
+    color: #f8fafc !important;
+}
+
+html.dark-theme .table thead th,
+html.dark-theme .table-secondary th,
+html.dark-theme .table-light th,
+html.dark-theme .table th {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: #f8fafc !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+}
+
+html.dark-theme .table tbody td {
+    color: #cbd5e1 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark-theme .table tbody tr:hover td {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: #ffffff !important;
+}
+
+/* Card body text */
+html.dark-theme .card-body {
+    color: #cbd5e1;
+}
+
 
 
 

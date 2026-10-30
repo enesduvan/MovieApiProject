@@ -12,5 +12,6 @@ namespace MovieApi.Domain.Entities
         public string CategoryName { get; set; }
         public bool Status { get; set; }
         public string? Description { get; set; }
+        public List<Movie> Movies { get; set; }
     }
 }

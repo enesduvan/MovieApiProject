@@ -1,0 +1,89 @@
+@model AdminCreateCategoryDto
+@{
+    ViewData["Title"] = "CreateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-4">
+        <!-- Kart Üst Başlık ve Geri Dön Butonu -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pb-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center gap-3">
+                <div class="fs-2 text-primary">
+                    <i class="bx bx-category-alt"></i>
+                </div>
+                <div>
+                    <h5 class="mb-1">Yeni Kategori Ekle</h5>
+                    <p class="text-muted mb-0 small">Sisteme yeni bir film & dizi kategorisi tanımlayın.</p>
+                </div>
+            </div>
+            <a href="/Admin/AdminCategory/CategoryList" class="btn btn-outline-secondary d-inline-flex align-items-center gap-1">
+                <i class="bx bx-arrow-back fs-5"></i>
+                <span>Listeye Dön</span>
+            </a>
+        </div>
+
+        <!-- Form Alanı -->
+        <form asp-area="Admin" asp-controller="AdminCategory" asp-action="CreateCategory" method="post">
+            <div class="row g-4 mb-4">
+                <!-- Kategori Adı -->
+                <div class="col-12 col-lg-8">
+                    <label asp-for="CategoryName" class="form-label fw-bold">
+                        Kategori Adı <span class="text-danger">*</span>
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent">
+                            <i class="bx bx-tag text-primary fs-5"></i>
+                        </span>
+                        <input type="text" 
+                               asp-for="CategoryName" 
+                               class="form-control form-control-lg" 
+                               placeholder="Örn: Bilim Kurgu, Aksiyon, Macera, Komedi..." 
+                               required 
+                               autofocus 
+                               autocomplete="off" />
+                    </div>
+                </div>
+
+                <!-- Kategori Durumu -->
+                <div class="col-12 col-lg-4">
+                    <label asp-for="Status" class="form-label fw-bold">
+                        Durum <span class="text-danger">*</span>
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent">
+                            <i class="bx bx-toggle-right text-primary fs-5"></i>
+                        </span>
+                        <select asp-for="Status" class="form-select form-select-lg">
+                            <option value="true" selected>Aktif</option>
+                            <option value="false">Pasif</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Açıklama -->
+                <div class="col-12">
+                    <label asp-for="Description" class="form-label fw-bold">
+                        Açıklama <span class="text-muted small fw-normal">(İsteğe Bağlı)</span>
+                    </label>
+                    <textarea asp-for="Description" 
+                              class="form-control" 
+                              rows="4" 
+                              placeholder="Kategori hakkında kısa bir açıklama veya not yazın (Örn: Gelecek temalı, bilim kurgu ve yapay zeka odaklı yapımlar)..."></textarea>
+                </div>
+            </div>
+
+            <!-- Alt Butonlar -->
+            <div class="d-flex align-items-center gap-2 pt-3 border-top">
+                <button type="submit" class="btn btn-primary px-4 py-2 d-inline-flex align-items-center gap-2">
+                    <i class="bx bx-check-circle fs-5"></i>
+                    <span>Kategoriyi Kaydet</span>
+                </button>
+                <a href="/Admin/AdminCategory/CategoryList" class="btn btn-outline-secondary px-4 py-2 d-inline-flex align-items-center gap-2">
+                    <i class="bx bx-x fs-5"></i>
+                    <span>Vazgeç</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
